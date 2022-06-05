@@ -21,7 +21,7 @@ public class P09SpiceMustFlow {
         if(sum >= 26){
             sum -= 26;
         }
-        System.out.println(sum);
+        System.out.println(sum);//
 
     }
 }
