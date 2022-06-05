@@ -22,6 +22,5 @@ public class P09SpiceMustFlow {
             sum -= 26;
         }
         System.out.println(sum);//асд
-
     }
 }
