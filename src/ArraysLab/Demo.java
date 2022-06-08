@@ -1,5 +1,6 @@
 package ArraysLab;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Demo {
@@ -19,5 +20,6 @@ public class Demo {
             System.out.println(arr[i]);
         }
 
+        int [] arrays = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
     }
 }
