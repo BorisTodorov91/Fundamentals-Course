@@ -20,6 +20,7 @@ public class Demo {
             System.out.println(arr[i]);
         }
 
+        //
         int [] arrays = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
     }
 }
