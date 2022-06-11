@@ -22,5 +22,8 @@ public class Demo {
 
         //
         int [] arrays = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        //
+
+
     }
 }
