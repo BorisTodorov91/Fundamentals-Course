@@ -5,14 +5,10 @@ import java.util.Scanner;
 public class P010TreasureHunt {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         String[] treasureChest = scanner.nextLine().split("\\|");
-
         String command = scanner.nextLine();
-
         while (!command.equals("Yohoho!")) {
             String[] commandParts = command.split(" ");
-
             switch (commandParts[0]) {
                 case "Loot":
                     for (int i = 1; i < commandParts.length; i++) {
@@ -70,13 +66,9 @@ public class P010TreasureHunt {
                     }
                     System.out.println();
                     break;
-
             }
-
-
             command = scanner.nextLine();
         }
-
         String treasureCount = String.join("", treasureChest);
         int charCounter = 0;
         for (int i = 0; i < treasureCount.length(); i++) {
