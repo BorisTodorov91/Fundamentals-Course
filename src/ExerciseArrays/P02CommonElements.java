@@ -17,6 +17,7 @@ public class P02CommonElements {
             for (String firstElements : firstArr) {
                 if ( firstElements.equals(secondElement)){
                     System.out.print(firstElements + " ");
+                    break;
                 }
             }
         }
