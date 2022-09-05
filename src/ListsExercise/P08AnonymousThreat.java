@@ -15,6 +15,7 @@ public class P08AnonymousThreat {
         String comands = scanner.nextLine(); // тук държиме  командите
 
         while (!comands.equals("3:1"))// докато нашата команда е различна от 3:1 изпълняваме следния код {
+        {
 
             if (comands.contains("merge")) {
                 //•	merge {startIndex} {endIndex}
@@ -38,12 +39,12 @@ public class P08AnonymousThreat {
 
                     //взимаме елементите от текущите индекси и ги запазваме в променливата String resultMerge = ""
                     String resultMerge = "";
-                    for (int index = startIndex; index <= endIndex ; index++) {
+                    for (int index = startIndex; index <= endIndex; index++) {
                         String currentText = names.get(index);
                         resultMerge += currentText;
                     }
                     // премахваме елементите от стартовия до крайния индекс
-                    for (int index = startIndex; index <= endIndex ; index++) {
+                    for (int index = startIndex; index <= endIndex; index++) {
                         names.remove(startIndex);
                     }
                     // поставяме резултата от променливата String resultMerge = "" на стартовия индекс в нашия лист
@@ -53,17 +54,35 @@ public class P08AnonymousThreat {
 
             } else if (comands.contains("divide")) {
                 //•	divide {index} {partitions}
+                // взимаме индекса и номера на който трябва да делиме елемента от нашия лист
                 int index = Integer.parseInt(comands.split(" ")[1]);
                 int partsForDevide = Integer.parseInt(comands.split(" ")[2]);
 
+                // взимаме елемента от нашия лист на индекса  който трябва да делиме
+                String elementForDevide = names.get(index);
+                names.remove(index);
 
-                
+                // колко емлемента ще има всяка една част
+                int partSize = elementForDevide.length() / partsForDevide;
+                int beginIndexOfText = 0;
+                for (int part = 1; part < partsForDevide; part++) {
+                    names.add(index, elementForDevide.substring(beginIndexOfText, beginIndexOfText + partSize));
 
+                    index++;
+
+                    beginIndexOfText += partSize;
+
+                }
+                //добавяме останалите символи къмпоследата част
+                names.add(index, elementForDevide.substring(beginIndexOfText)); // не задаваме краен индекс самият медот  взима до последния
             }
 
+            comands = scanner.nextLine(); // взимаме нова команда
+        }
 
-        comands = scanner.nextLine(); // взимаме нова команда
+        for (String text :
+                names) {
+            System.out.print(text + " ");
+        }
     }
-
-
 }
