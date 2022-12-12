@@ -11,6 +11,9 @@ public class P04WordFilter {
         String[] words = Arrays.stream(scanner.nextLine().split(" "))
                 .filter( e -> e.length() % 2 == 0)
                 .toArray(String[]::new);
+
+
+
         for (String item:
              words) {
             System.out.println(item);
