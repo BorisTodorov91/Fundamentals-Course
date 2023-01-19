@@ -28,6 +28,8 @@ public class main {
         }
 
         //personList.stream().sorted((first, second) -> Integer.compare(first.getAge(), second.getAge()) ).forEach(System.out::println);
-        personList.stream().sorted(Comparator.comparing(Person::getAge)).forEach(System.out::println);
+       personList.stream().sorted(Comparator.comparing(Person::getAge)).forEach(System.out::println);
+
+       // personList.stream().sorted(Comparator.comparing(Person::getName)).filter(person -> person.getAge() > 10).sorted(Comparator.comparing(Person::getAge)).forEach(System.out::println);
     }
 }
