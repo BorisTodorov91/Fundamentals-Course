@@ -24,9 +24,10 @@ public class P07LegendaryFarming {
         while (!isWin){
             String command = scanner.nextLine();
             String[] itemCommand = command.split(" ");
+                                                    //!!!важно
             for (int i = 0; i < itemCommand.length; i += 2) {
                 int quantity = Integer.parseInt(itemCommand[i]);
-                String name = itemCommand[i +1].toLowerCase();
+                String name = itemCommand[i + 1].toLowerCase();//!!!важно
 
                 // валиден итем
                 if(name.equals(shards) || name.equals(fragments)|| name.equals(motes)){
