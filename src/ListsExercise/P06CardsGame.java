@@ -47,7 +47,8 @@ public class P06CardsGame {
             //втория печели -> сума от картите на втория
             System.out.printf("Second player wins! Sum: %d", getCardsSum(secondPlayerCards));
         }
-        //2. ако на втория му свършат картите
+        //2. ако на втория му свършат картите10 20 30 40 50
+        //50 40 30 30 10
         else if (secondPlayerCards.size() == 0) {
             //първия печели
             System.out.printf("First player wins! Sum: %d", getCardsSum(fistPlayerCards));
