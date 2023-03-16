@@ -52,6 +52,7 @@ public class MovingTarget {
             command = scanner.nextLine();
         }
 
+      //  System.out.println(integerList.toString().replaceAll("[\\[\\]]", ""));
 
         StringBuilder stringBuilder = new StringBuilder();
         for (Integer integer : integerList) {
