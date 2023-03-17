@@ -31,7 +31,7 @@ public class TreasureHunt {
                     break;
                 case "Drop":
                     int index = Integer.parseInt(inputData[1]);
-                    if(index >= 0 && index <= list.size()){
+                    if(index >= 0 && index < list.size()){
                         String remove = list.remove(index);
                         //list.remove(index);
                         list.add(remove);
@@ -42,9 +42,9 @@ public class TreasureHunt {
 
                     int numFrom = list.size() - numOfIteration  ;
                     StringBuilder sb = new StringBuilder();
-                    for (int i = numFrom; i <= list.size() - 1; i = numFrom) {
+                    for (int i = numFrom; i <= list.size() - 1; ) {
                         String remove = list.remove(i);
-                        sb.append(remove+", ");
+                        sb.append(remove).append(", ");
                     }
                     int i = sb.lastIndexOf(", ");
                     sb.deleteCharAt(i);
